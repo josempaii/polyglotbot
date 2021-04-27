@@ -9,6 +9,8 @@ Important details:
 
 -The bot is not finished , this code is going to change over time.
 
+-reactionrole.js have to go in a different folder named commands
+
 
 
 Discord DM : jöse#6202
