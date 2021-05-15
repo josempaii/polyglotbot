@@ -9,7 +9,7 @@ module.exports = {
         const italianrole = message.guild.roles.cache.find(role => role.name === "Italian");
         const hindirole = message.guild.roles.cache.find(role => role.name === "Hindi");
         const catalanrole = message.guild.roles.cache.find(role => role.name === "Catalan");
-        const chineserole = message.guild.roles.cache.find(role => role.name === "Chinese");
+        const mandarinrole = message.guild.roles.cache.find(role => role.name === "Mandarin");
         const russianrole= message.guild.roles.cache.find(role => role.name === "Russian");
         const portugueserole= message.guild.roles.cache.find(role => role.name === "Portuguese");
         const japaneserole = message.guild.roles.cache.find(role => role.name === "Japanese");
@@ -19,13 +19,14 @@ module.exports = {
         const dutchrole = message.guild.roles.cache.find(role => role.name === "Dutch");
         const hungarianrole = message.guild.roles.cache.find(role => role.name === "Hungarian");
         const englishrole= message.guild.roles.cache.find(role => role.name === "English");
+        const malayrole= message.guild.roles.cache.find(role => role.name === "Malay");
 
         const spanishemoji = '🇪🇸';
         const frenchemoji = '🇫🇷';
         const italianemoji = '🇮🇹';
         const hindiemoji = '🇮🇳';
         const catalanemoji = '📙';
-        const chineseemoji = '🇨🇳';
+        const mandarinemoji = '🇨🇳';
         const russianemoji = '🇷🇺';
         const portugueseemoji = '🇵🇹';
         const japaneseemoji = '🇯🇵';
@@ -35,6 +36,7 @@ module.exports = {
         const dutchemoji = '🇳🇱';
         const englishemoji = '🇬🇧';
         const hungarianemoji = '🇭🇺';
+        const malayemoji = '🇲🇾';
 
         let embed = new Discord.MessageEmbed()
             .setColor('#3B78D4')
@@ -46,7 +48,7 @@ module.exports = {
                 + `${italianemoji}  - Italian\n`
                 + `${hindiemoji}  - Hindi\n`
                 + `${catalanemoji}  - Catalan\n`
-                + `${chineseemoji}  - Chinese\n`
+                + `${mandarinemoji}  - Mandarin\n`
                 + `${russianemoji}  - Russian\n`
                 + `${portugueseemoji}  - Portuguese\n`
                 + `${japaneseemoji}  - Japanese\n`
@@ -54,6 +56,7 @@ module.exports = {
                 + `${germanemoji}  - German\n`
                 + `${esperantoemoji}  - Esperanto\n`
                 + `${hungarianemoji}  - Hungarian\n`
+                + `${malayemoji}  - Malay\n`
                 + `${dutchemoji}  - Dutch`
                 );
  
@@ -64,7 +67,7 @@ module.exports = {
         messageEmbed.react(italianemoji);
         messageEmbed.react(hindiemoji);
         messageEmbed.react(catalanemoji);
-        messageEmbed.react(chineseemoji);
+        messageEmbed.react(mandarinemoji);
         messageEmbed.react(russianemoji);
         messageEmbed.react(portugueseemoji);
         messageEmbed.react(japaneseemoji);
@@ -74,6 +77,7 @@ module.exports = {
         messageEmbed.react(dutchemoji);
         messageEmbed.react(englishemoji);
         messageEmbed.react(hungarianemoji);
+        messageEmbed.react(malayemoji);
 
         client.on('messageReactionAdd', async (reaction, user) => {
             if (reaction.message.partial) await reaction.message.fetch();
@@ -97,8 +101,8 @@ module.exports = {
                 else if (reaction.emoji.name === catalanemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(catalanrole);
                 }
-                else if (reaction.emoji.name === chineseemoji) {
-                    await reaction.message.guild.members.cache.get(user.id).roles.add(chineserole);
+                else if (reaction.emoji.name === mandarinemoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(mandarinrole);
                 }
                 else if (reaction.emoji.name === russianemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(russianrole);
@@ -126,6 +130,9 @@ module.exports = {
                 }
                 else if (reaction.emoji.name === hungarianemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(hungarianrole);
+                }
+                else if (reaction.emoji.name === malayemoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(malayrole);
                 }
             } else {
                 return;
@@ -157,8 +164,8 @@ module.exports = {
                 else if (reaction.emoji.name === catalanemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(catalanrole);
                 }
-                else if (reaction.emoji.name === chineseemoji) {
-                    await reaction.message.guild.members.cache.get(user.id).roles.remove(chineserole);
+                else if (reaction.emoji.name === mandarinemoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(mandarinrole);
                 }
                 else if (reaction.emoji.name === russianemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(russianrole);
@@ -186,6 +193,9 @@ module.exports = {
                 }
                 else if (reaction.emoji.name === hungarianemoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(hungarianrole);
+                }
+                  else if (reaction.emoji.name === malayemoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(malayrole);
                 }
             } else {
                 return;
