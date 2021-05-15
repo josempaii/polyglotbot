@@ -6,54 +6,54 @@ module.exports = {
         const channel = '780132187395588157';
         const spanishrole = message.guild.roles.cache.find(role => role.name === "Spanish"); 
         const spanishemoji = '🇪🇸';
+        
         const frenchrole = message.guild.roles.cache.find(role => role.name === "French");
         const frenchemoji = '🇫🇷';
+        
         const italianrole = message.guild.roles.cache.find(role => role.name === "Italian");
         const italianemoji = '🇮🇹';
+        
         const hindirole = message.guild.roles.cache.find(role => role.name === "Hindi");
         const hindiemoji = '🇮🇳';
+        
         const catalanrole = message.guild.roles.cache.find(role => role.name === "Catalan");
         const catalanemoji = '823947203042869248';
+        
         const mandarinrole = message.guild.roles.cache.find(role => role.name === "Mandarin");
         const mandarinemoji = '🇨🇳';
+        
         const russianrole= message.guild.roles.cache.find(role => role.name === "Russian");
         const russianemoji = '🇷🇺';
+        
         const portugueserole= message.guild.roles.cache.find(role => role.name === "Portuguese");
         const portugueseemoji = '🇵🇹';
+        
         const japaneserole = message.guild.roles.cache.find(role => role.name === "Japanese");
         const japaneseemoji = '🇯🇵';
+        
         const scandinavianrole = message.guild.roles.cache.find(role => role.name === "Scandinavian");
         const scandinavianemoji = '843089464556781588';
+        
         const germanrole = message.guild.roles.cache.find(role => role.name === "German");
         const germanemoji = '🇩🇪';
+        
         const esperantorole = message.guild.roles.cache.find(role => role.name === "Esperanto");
         const esperantoemoji = '827549468084928544';
+        
         const dutchrole = message.guild.roles.cache.find(role => role.name === "Dutch");
         const dutchemoji = '🇳🇱';
+        
         const hungarianrole = message.guild.roles.cache.find(role => role.name === "Hungarian");
         const englishemoji = '🇬🇧';
+        
         const englishrole= message.guild.roles.cache.find(role => role.name === "English");
         const hungarianemoji = '🇭🇺';
+        
         const malayrole= message.guild.roles.cache.find(role => role.name === "Malay");
         const malayemoji = '🇲🇾';
 
        
         
-       
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        
-
         let embed = new Discord.MessageEmbed()
             .setColor('#3B78D4')
             .setTitle('Select the languages you speak or are learning by clicking on the emojis below this message')
